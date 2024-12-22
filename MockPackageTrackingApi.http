@@ -1,0 +1,6 @@
+@MockPackageTrackingApi_HostAddress = http://localhost:5296
+
+GET {{MockPackageTrackingApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
