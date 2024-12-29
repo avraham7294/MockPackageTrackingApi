@@ -20,8 +20,8 @@ public class PackageTrackingController : ControllerBase
     [HttpGet("{trackingNumber}")]
     public async Task<ActionResult<PackageTracking>> GetPackage(string trackingNumber)
     {
-        var package = await _context.Packages
-            .FirstOrDefaultAsync(p => p.TrackingNumber == trackingNumber);
+        var package = await _context.PackageTrackings
+            .FirstOrDefaultAsync(p => p.Id == trackingNumber);
 
         if (package == null)
         {

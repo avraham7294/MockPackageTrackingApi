@@ -5,9 +5,8 @@ namespace MockPackageTrackingApi.Data
 {
     public class MockPackageTrackingContext : DbContext
     {
-        public MockPackageTrackingContext(DbContextOptions<MockPackageTrackingContext> options)
-            : base(options) { }
+        public MockPackageTrackingContext(DbContextOptions<MockPackageTrackingContext> options) : base(options) { }
 
-        public DbSet<PackageTracking> Packages { get; set; }
+        public DbSet<PackageTracking> PackageTrackings { get; set; }
     }
 }

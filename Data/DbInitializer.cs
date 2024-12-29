@@ -8,9 +8,9 @@ namespace MockPackageTrackingApi.Data
     {
         public static void Initialize(MockPackageTrackingContext context)
         {
-            context.Database.EnsureCreated();
+            context.Database.EnsureCreated(); // Creates the database if it does not exist
 
-            if (context.Packages.Any())
+            if (context.PackageTrackings.Any())
             {
                 return; // Database has been seeded
             }
@@ -19,7 +19,7 @@ namespace MockPackageTrackingApi.Data
             {
                 new PackageTracking
                 {
-                    TrackingNumber = "ABC123456",
+                    Id = "ABC123456",
                     Carrier = "MockCarrier",
                     Status = "In Transit",
                     ShippingDate = DateTime.Now.AddDays(-5),
@@ -29,7 +29,7 @@ namespace MockPackageTrackingApi.Data
                 },
                 new PackageTracking
                 {
-                    TrackingNumber = "DEF789012",
+                    Id = "DEF789012",
                     Carrier = "MockCarrier",
                     Status = "Delivered",
                     ShippingDate = DateTime.Now.AddDays(-10),
@@ -39,7 +39,7 @@ namespace MockPackageTrackingApi.Data
                 }
             };
 
-            context.Packages.AddRange(packages);
+            context.PackageTrackings.AddRange(packages);
             context.SaveChanges();
         }
     }
