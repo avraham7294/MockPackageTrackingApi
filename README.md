@@ -16,7 +16,7 @@ The **Mock Package Tracking API** is a simple web application designed to simula
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/mock-package-tracking-api.git
+   git clone https://github.com/avraham7294/mock-package-tracking-api.git
    cd mock-package-tracking-api
    ```
 
